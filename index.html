@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <title>Estação Meteorológica IoT</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topo">
+    <div>
+      <p class="eyebrow">INTERNET DAS COISAS</p>
+      <h1>🌦️ Estação Meteorológica</h1>
+      <p>ESP8266 + DHT22 + Vercel + SQLite</p>
+    </div>
+    <div id="status" class="status offline">● Conectando...</div>
+  </header>
+
+  <main class="container">
+    <section class="cards">
+      <article class="card temperatura">
+        <div class="emoji">🌡️</div>
+        <div>
+          <span>Temperatura</span>
+          <strong id="temperatura">-- °C</strong>
+        </div>
+      </article>
+
+      <article class="card umidade">
+        <div class="emoji">💧</div>
+        <div>
+          <span>Umidade</span>
+          <strong id="umidade">-- %</strong>
+        </div>
+      </article>
+    </section>
+
+    <section class="painel">
+      <div class="painel-cabecalho">
+        <div>
+          <h2>Últimas leituras</h2>
+          <p id="atualizacao">Aguardando dados...</p>
+        </div>
+        <button id="atualizar" type="button">↻ Atualizar</button>
+      </div>
+
+      <div class="tabela-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Data/Hora</th>
+              <th>Temperatura</th>
+              <th>Umidade</th>
+            </tr>
+          </thead>
+          <tbody id="tabela">
+            <tr>
+              <td colspan="3" class="vazio">Nenhum dado recebido.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="info">
+      <div>
+        <strong>Banco de dados</strong>
+        <span>SQLite / Turso</span>
+      </div>
+      <div>
+        <strong>Atualização</strong>
+        <span id="frequencia">a cada 10 s</span>
+      </div>
+      <div>
+        <strong>Registros exibidos</strong>
+        <span>20 últimos</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Projeto educacional de IoT — Estação Meteorológica
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

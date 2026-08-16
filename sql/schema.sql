@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS leituras (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  temperatura REAL NOT NULL,
+  umidade REAL NOT NULL,
+  data_hora TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_leituras_data_hora
+ON leituras(data_hora);

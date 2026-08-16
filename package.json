@@ -1,0 +1,12 @@
+{
+  "name": "estacao-meteorologica-iot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Estação meteorológica IoT com ESP8266, Vercel Functions e Turso/SQLite.",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.15.15"
+  }
+}
