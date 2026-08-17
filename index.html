@@ -10,9 +10,9 @@
 <body>
   <header class="topo">
     <div>
-      <p class="eyebrow">EEEM "Dr. Silva Mello</p>
+      <p class="eyebrow">INTERNET DAS COISAS</p>
       <h1>🌦️ Estação Meteorológica</h1>
-      <p>Eletiva - ClimaLab</p>
+      <p>ESP8266 + DHT22 + Vercel + SQLite</p>
     </div>
     <div id="status" class="status offline">● Conectando...</div>
   </header>
@@ -77,6 +77,23 @@
         <span>20 últimos</span>
       </div>
     </section>
+     <!-- Gráfico responsivo -->
+        <section class="grafico-section">
+            <h2>📈 Gráfico de Temperatura</h2>
+            <div class="iframe-wrapper">
+                <iframe 
+                    src="https://thingspeak.com/channels/3456165/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&xaxis=Hora&yaxis=temperatura"
+                    scrolling="no"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+                <iframe src="https://thingspeak.com/channels/3456165/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Umidade&type=line&xaxis=data&yaxis=%25"
+                  scrolling="no"
+                  frameborder="0"
+                  allowfullscreen>
+                </iframe>
+            </div>
+        </section>
   </main>
 
   <footer>
